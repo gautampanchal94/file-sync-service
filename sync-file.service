@@ -1,0 +1,11 @@
+[Unit]
+Description=Sync both file only one way
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/bash /root/.script/file-update.sh &
+Type=simple
+Restart=always
+
+[Install]
+WantedBy=default.target

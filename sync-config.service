@@ -1,0 +1,11 @@
+[Unit]
+Description=Update config.json in homebridge when ever config.json update.
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/bash /root/.scripts/update-config.sh &
+Type=simple
+Restart=always
+
+[Install]
+WantedBy=default.target

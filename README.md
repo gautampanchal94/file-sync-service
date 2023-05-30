@@ -1,10 +1,10 @@
 # Config Sync
 
-Run following command after clone this repo & change `source/file/path` & `dest/file/path`
+Run following command after clone this repo & change `SOURCE`, `DEST` & `LOGS`
 
 ```sh
 sudo apt update
-sudo apt install inotify-tools
+sudo apt install inotify-tools jq
 sudo rsync -av ./file-update.sh /root/.script/file-update.sh
 sudo rsync -av sync-file.service /etc/systemd/system/
 ```
